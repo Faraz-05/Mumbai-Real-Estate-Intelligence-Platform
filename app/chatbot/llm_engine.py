@@ -1,4 +1,4 @@
-from openai import OpenAI
+from groq import Groq
 import os
 
 from chatbot.locality_extractor import LocalityExtractor
@@ -9,10 +9,10 @@ class LLMEngine:
 
     def __init__(self):
 
-        self.model_name = "gpt-4o-mini"
+        self.model_name = "llama3-70b-8192"
 
-        self.client = OpenAI(
-            api_key=os.getenv("OPENAI_API_KEY")
+        self.client = Groq(
+            api_key=os.getenv("GROQ_API_KEY")
         )
 
         self.extractor = LocalityExtractor()
@@ -56,10 +56,7 @@ Provide a detailed investment recommendation.
         response = self.client.chat.completions.create(
             model=self.model_name,
             messages=[
-                {
-                    "role": "user",
-                    "content": prompt
-                }
+                {"role": "user", "content": prompt}
             ]
         )
 
@@ -101,16 +98,13 @@ Properties:
 Question:
 {question}
 
-Answer in a professional manner.
+Answer in a professional, structured manner.
 """
 
         response = self.client.chat.completions.create(
             model=self.model_name,
             messages=[
-                {
-                    "role": "user",
-                    "content": prompt
-                }
+                {"role": "user", "content": prompt}
             ]
         )
 

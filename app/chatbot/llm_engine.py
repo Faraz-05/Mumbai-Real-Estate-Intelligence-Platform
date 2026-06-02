@@ -1,4 +1,3 @@
-import ollama
 from openai import OpenAI
 import os
 
@@ -10,26 +9,22 @@ class LLMEngine:
 
     def __init__(self):
 
-        self.model_name = "phi3"
+        self.model_name = "gpt-4o-mini"
+
+        self.client = OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
 
         self.extractor = LocalityExtractor()
 
         self.data_engine = DataEngine()
-
         self.data_engine.load_data()
 
-    def ask_locality_question(
-        self,
-        locality,
-        question
-    ):
+    def ask_locality_question(self, locality, question):
 
-        details = self.data_engine.get_locality_details(
-            locality
-        )
+        details = self.data_engine.get_locality_details(locality)
 
         if details is None:
-
             return f"No data found for {locality}"
 
         prompt = f"""
@@ -53,7 +48,6 @@ Number of Properties:
 {details['properties']}
 
 Question:
-
 {question}
 
 Provide a detailed investment recommendation.
@@ -69,22 +63,19 @@ Provide a detailed investment recommendation.
             ]
         )
 
-        return response["message"]["content"]
-    
+        return response.choices[0].message.content
 
     def answer_question(self, question):
 
-        locality = self.extractor.extract_locality(
-            question
-        )
+        locality = self.extractor.extract_locality(question)
 
         if locality is None:
-
             return "Could not identify locality."
 
-        details = self.data_engine.get_locality_details(
-            locality
-        )
+        details = self.data_engine.get_locality_details(locality)
+
+        if details is None:
+            return f"No data found for {locality}"
 
         prompt = f"""
 You are a Mumbai Real Estate Expert.
@@ -113,14 +104,14 @@ Question:
 Answer in a professional manner.
 """
 
-        response = ollama.chat(
+        response = self.client.chat.completions.create(
             model=self.model_name,
             messages=[
-            {
+                {
                     "role": "user",
                     "content": prompt
                 }
             ]
         )
 
-        return response["message"]["content"]
+        return response.choices[0].message.content

@@ -90,7 +90,7 @@ class QueryRouter:
         # =========================
 
         else:
-
-            return self.llm_engine.answer_question(
-                question
-            )
+            try:
+                return self.llm_engine.answer_question(question)
+            except Exception as e:
+                return f"LLM Error: {str(e)}"

@@ -1,4 +1,6 @@
 import ollama
+from openai import OpenAI
+import os
 
 from chatbot.locality_extractor import LocalityExtractor
 from chatbot.data_engine import DataEngine
@@ -57,7 +59,7 @@ Question:
 Provide a detailed investment recommendation.
 """
 
-        response = ollama.chat(
+        response = self.client.chat.completions.create(
             model=self.model_name,
             messages=[
                 {

@@ -266,20 +266,103 @@ required multiple iterations.
 - Matplotlib
 - Seaborn
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-app/
+```text
+Mumbai-Real-Estate-Intelligence-Platform/
 │
-├── chatbot/
+├── app/
+│   ├── chatbot/
+│   │   ├── prediction_engine.py
+│   │   ├── explainability_engine.py
+│   │   ├── recommendation_engine.py
+│   │   ├── data_engine.py
+│   │   ├── query_router.py
+│   │   ├── locality_extractor.py
+│   │   └── llm_engine.py
+│   │
+│   ├── data/
+│   │   ├── investment_analysis.csv
+│   │   ├── locality_analysis.csv
+│   │   ├── geo_analysis.csv
+│   │   └── kpi_data.csv
+│   │
+│   ├── tests/
+│   │   ├── test_prediction.py
+│   │   ├── test_recommendation.py
+│   │   ├── test_shap.py
+│   │   └── other unit tests
+│   │
+│   └── main.py
+│
 ├── data/
-├── models/
-├── visuals/
-├── dashboard/
-├── reports/
-├── notebooks/
+│   ├── raw/
+│   │   ├── secondary_sales.csv
+│   │   ├── rentals.csv
+│   │   ├── metro_stations.csv
+│   │   └── under_construction.csv
+│   │
+│   └── processed/
+│       ├── secondary_sales_cleaned.csv
+│       └── under_construction_cleaned.csv
 │
-├── main.py
-└── requirements.txt
+├── models/
+│   ├── final_lightgbm_model.pkl
+│   ├── final_xgboost_model.pkl
+│   ├── final_random_forest_model.pkl
+│   └── label_encoders.pkl
+│
+├── dashboard/
+│   └── Mumbai_Real_Estate_Intelligence_Platform.pbix
+│
+├── dashboard_data/
+│   ├── investment_analysis.csv
+│   ├── locality_analysis.csv
+│   ├── geo_analysis.csv
+│   └── kpi_data.csv
+│
+├── reports/
+│   ├── shap_bar.png
+│   └── shap_summary.png
+│
+├── visuals/
+│   ├── Executive_overview.png
+│   ├── Investment_Analysis.png
+│   ├── Location_Geo_Analysis.png
+│   ├── ML_Prediction_AI.png
+│   ├── market_kpi.png
+│   ├── property_price_prediction1.png
+│   ├── property_price_prediction2.png
+│   ├── property_price_prediction3.png
+│   ├── ai_chatbot.png
+│   ├── shap_bar.png
+│   └── shap_summary.png
+│
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_model_training.ipynb
+│   └── 04_powerbi_dataset_creation.ipynb
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+## 📁 Folder Description
+
+| Folder | Purpose |
+|----------|----------|
+| `app/` | Main Streamlit application and AI modules |
+| `chatbot/` | Prediction, Explainability, Recommendation and AI Assistant logic |
+| `data/` | Raw and processed Mumbai real estate datasets |
+| `models/` | Trained Machine Learning models and encoders |
+| `dashboard/` | Power BI dashboard source file |
+| `dashboard_data/` | Datasets used for Power BI visualizations |
+| `reports/` | SHAP Explainability visualizations |
+| `visuals/` | Screenshots used in README and project documentation |
+| `notebooks/` | Complete data science workflow from preprocessing to model training |
+| `tests/` | Unit tests for validation and model verification |
 
 ## 📊 Interactive Power BI Dashboard
 

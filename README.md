@@ -10,6 +10,16 @@
 <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge" />
 <img src="https://img.shields.io/badge/PowerBI-Business_Intelligence-yellow?style=for-the-badge" />
 
+# 🚀 Live Demo
+
+The project is deployed and fully functional.
+
+🔗 Streamlit App:  
+https://mumbai-real-estate-intelligence-platform.streamlit.app/
+
+🔗 Power BI Dashboard:  
+https://app.powerbi.com/links/7UxEQBbDjd?ctid=c274dbc2-fb53-4037-8d76-f7f8315c5ff2&pbi_source=linkShare
+
 ### Predict • Explain • Analyze • Invest
 
 </div>

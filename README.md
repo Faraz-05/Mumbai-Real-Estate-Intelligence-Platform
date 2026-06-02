@@ -281,6 +281,21 @@ app/
 ├── main.py
 └── requirements.txt
 
+## 📊 Interactive Power BI Dashboard
+
+Explore the complete interactive dashboard here:
+
+🔗 Power BI Report:
+https://app.powerbi.com/links/7UxEQBbDjd?ctid=c274dbc2-fb53-4037-8d76-f7f8315c5ff2&pbi_source=linkShare
+
+The dashboard includes:
+- Executive Overview
+- Investment Analytics
+- Property Pricing Analysis
+- Geo-Spatial Analysis
+- Market KPI Tracking
+- Hotspot Detection
+
 # 🔮 Future Scope
 
 - RAG-based AI Assistant

@@ -11,13 +11,13 @@ class PredictionEngine:
         self.label_encoders = None
 
         self.model_path = (
-            Path(__file__).resolve().parent.parent
+            Path(__file__).resolve().parent.parent.parent
             / "models"
             / "final_lightgbm_model.pkl"
         )
 
         self.encoder_path = (
-            Path(__file__).resolve().parent.parent
+            Path(__file__).resolve().parent.parent.parent
             / "models"
             / "label_encoders.pkl"
         )

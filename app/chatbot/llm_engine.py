@@ -9,7 +9,7 @@ class LLMEngine:
 
     def __init__(self):
 
-        self.model_name = "llama-3.1-70b-versatile"
+        self.model_name = "llama-3.3-70b-versatile"
 
         self.client = Groq(
             api_key=os.getenv("GROQ_API_KEY")

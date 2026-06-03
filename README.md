@@ -24,13 +24,13 @@ https://app.powerbi.com/links/7UxEQBbDjd?ctid=c274dbc2-fb53-4037-8d76-f7f8315c5f
 
 ## ✨ Key Features
 
- AI-powered Mumbai property price prediction
- SHAP-based explainable AI insights
- Investment locality recommendation engine
- Generative AI real-estate assistant
- Interactive Streamlit dashboard
- Power BI business intelligence reports
- Market KPI tracking and analytics
+ - AI-powered Mumbai property price prediction
+ - SHAP-based explainable AI insights
+ - Investment locality recommendation engine
+ - Generative AI real-estate assistant
+ - Interactive Streamlit dashboard
+ - Power BI business intelligence reports
+ - Market KPI tracking and analytics
 
 </div>
 

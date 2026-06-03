@@ -276,6 +276,36 @@ required multiple iterations.
 - Matplotlib
 - Seaborn
 
+## ⚙️ Local Setup & Installation
+
+# Clone the repository
+
+git clone https://github.com/Faraz-05/Mumbai-Real-Estate-Intelligence-Platform.git
+
+# Navigate to project directory
+
+cd Mumbai-Real-Estate-Intelligence-Platform
+
+# Create virtual environment
+
+python -m venv venv
+
+# Activate virtual environment
+
+# Windows
+venv\Scripts\activate
+
+# Linux / Mac
+source venv/bin/activate
+
+# Install dependencies
+
+pip install -r requirements.txt
+
+# Run Streamlit application
+
+streamlit run app/main.py
+
 ## 📂 Project Structure
 
 ```text

@@ -22,6 +22,16 @@ https://app.powerbi.com/links/7UxEQBbDjd?ctid=c274dbc2-fb53-4037-8d76-f7f8315c5f
 
 ### Predict • Explain • Analyze • Invest
 
+## ✨ Key Features
+
+- AI-powered Mumbai property price prediction
+- SHAP-based explainable AI insights
+- Investment locality recommendation engine
+- Generative AI real-estate assistant
+- Interactive Streamlit dashboard
+- Power BI business intelligence reports
+- Market KPI tracking and analytics
+
 </div>
 
 # 🎯 Problem Statement
@@ -418,6 +428,12 @@ The dashboard includes:
 - Geo-Spatial Analysis
 - Market KPI Tracking
 - Hotspot Detection
+
+⭐ Support This Project
+If you found this project useful or learned something from it, consider giving it a star on GitHub.
+
+⭐ Star the repository:
+https://github.com/Faraz-05/Mumbai-Real-Estate-Intelligence-Platform
 
 # 🔮 Future Scope
 
